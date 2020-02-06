@@ -125,6 +125,7 @@ public class Menu {
                     selection = val.menuValidate(userInput);
 
                     registerChoice(selection);
+                    ser.Serialization();
                 }
                 break;
             case 3:
