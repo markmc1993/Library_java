@@ -24,7 +24,7 @@ public class Deserialize {
 
 
             try {
-                FileInputStream fileIn = new FileInputStream("staffusers.ser");
+                FileInputStream fileIn = new FileInputStream("vipmembers.ser");
                 ObjectInputStream in = new ObjectInputStream(fileIn);
                 Control.vipmembers = (HashMap) in.readObject();
                 in.close();
@@ -39,7 +39,7 @@ public class Deserialize {
 
 
             try {
-                FileInputStream fileIn = new FileInputStream("fullmembers.ser");
+                FileInputStream fileIn = new FileInputStream("members.ser");
                 ObjectInputStream in = new ObjectInputStream(fileIn);
                 Control.members = (HashMap) in.readObject();
                 in.close();

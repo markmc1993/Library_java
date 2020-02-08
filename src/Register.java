@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Register {
@@ -15,6 +16,9 @@ public class Register {
     private static String dob;
     Validators val = new Validators();
     PassEncrypt pass = new PassEncrypt();
+
+    Serialize ser = new Serialize();
+
     public void casualRegister()
     {
         //Get details from user, validate and add to correct user hashmap
@@ -49,6 +53,8 @@ public class Register {
         User newUser = new User(firstName, lastName, username, pass.encrypt(password), email);
         Control.users.put(newUser.getUserName(), newUser);
         System.out.println(username + " added to system. Close app and login to confirm");
+        Control.userlogins.put(username, new LinkedList<>());
+        ser.Serialization();
 
     }
 
@@ -77,7 +83,7 @@ public class Register {
         val.dateValidate(dob);
         System.out.println("Please enter your desired password");
         password = input.next();
-        val.passValidate(password);
+        password = val.passValidate(password);
         while (!equalPass){
             System.out.println("Please confirm desired password");
             rePassword = input.next();
@@ -97,6 +103,11 @@ public class Register {
         Member newMem = new Member(firstName, lastName, username, pass.encrypt(password), email, address, postCode, phoneNo, dob);
         Control.users.put(newMem.getUserName(), newMem);
         System.out.println(username + " added to system. Close app and login to confirm");
+        Control.userlogins.put(username, new LinkedList<>());
+        Control.loans.put(username, new LinkedList<>());
+        Control.loanhistories.put(username, new LinkedList<>());
+        Control.loanrequests.put(username, new LinkedList<>());
+        ser.Serialization();
     }
 
     public void vipRegister(){
@@ -125,7 +136,7 @@ public class Register {
         val.dateValidate(dob);
         System.out.println("Please enter your desired password");
         password = input.next();
-        val.passValidate(password);
+        password = val.passValidate(password);
         while (!equalPass){
             System.out.println("Please confirm desired password");
             rePassword = input.next();
@@ -137,6 +148,7 @@ public class Register {
                 System.out.println("Passwords do not match, try again");
                 rePassword = input.next();
             }
+
         }
 
         username = userNameGenerate(firstName, lastName);
@@ -145,10 +157,15 @@ public class Register {
         Member newMem = new Member(firstName, lastName, username, pass.encrypt(password), email, address, postCode, phoneNo, dob);
         Control.users.put(newMem.getUserName(), newMem);
         System.out.println(username + " added to system. Close app and login to confirm");
+        Control.userlogins.put(username, new LinkedList<>());
+        Control.loans.put(username, new LinkedList<>());
+        Control.loanhistories.put(username, new LinkedList<>());
+        Control.loanrequests.put(username, new LinkedList<>());
+
+        ser.Serialization();
     }
 
     private String userNameGenerate(String fName, String lName){
-        String userName = fName.substring(0,1) + lName.substring(1) + (Control.userlogins.size() + 1);
-        return userName;
+        return fName.substring(0,1).toLowerCase() + lName.substring(1) + (Control.userlogins.size() + 1);
     }
 }

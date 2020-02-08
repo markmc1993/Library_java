@@ -66,12 +66,12 @@ public class Validators {
         boolean valid = false;
 
         while(!valid){
-            if (pass.matches("\\p{Upper}+") && pass.matches("\\p{Lower}+") && pass.matches("\\p{Digit}+") && pass.matches("\\p{Punct}+" ) && pass.length() >=8 && pass.length() <= 20){
+            if (pass.matches(".*[A-Z]+.*") && pass.matches(".*[a-z]+.*") && pass.matches(".*[0-9]+.*") && pass.matches(".*\\p{Punct}+.*" ) && pass.length() >=8 && pass.length() <= 20){
                 valid = true;
             }
             else{
                 System.out.println("Invalid password. Password must be between 8 and 20 characters and contain at least 1 of the following: ");
-                System.out.printf("%1s %1f %1s %f %1s %f %1s %f",
+                System.out.printf("%1s %n %1s %n %1s %n %1s %n",
                         "Uppercase character",
                         "Lowercase character",
                         "A number",

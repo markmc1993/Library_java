@@ -14,7 +14,7 @@ public class Serialize {
         }
 
         try {
-            FileOutputStream fileOut = new FileOutputStream("staffusers.ser", false);
+            FileOutputStream fileOut = new FileOutputStream("vipmembers.ser", false);
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
             out.writeObject(Control.vipmembers);
             out.close();
@@ -24,7 +24,7 @@ public class Serialize {
         }
 
         try {
-            FileOutputStream fileOut = new FileOutputStream("fullmembers.ser", false);
+            FileOutputStream fileOut = new FileOutputStream("members.ser", false);
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
             out.writeObject(Control.members);
             out.close();

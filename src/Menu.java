@@ -322,12 +322,12 @@ public class Menu {
             case 2:
                 //login history
                 System.out.println("Login history");
-                Control.userlogins.get(userName);
+                System.out.println(Control.userlogins.get(userName));
                 break;
             case 3:
                 //loan history
                 System.out.println("Loan history");
-                Control.loanhistories.get(userName);
+                System.out.println(Control.loanhistories.get(userName));
                 break;
             case 4:
                 //reserve stock item
@@ -394,12 +394,12 @@ public class Menu {
             case 2:
                 //login history
                 System.out.println("Login history");
-                Control.userlogins.get(userName);
+                System.out.println(Control.userlogins.get(userName));
                 break;
             case 3:
                 //loan history
                 System.out.println("Loan history");
-                Control.loanhistories.get(userName);
+                System.out.println(Control.loanhistories.get(userName));
                 break;
             case 4:
                 //reserve stock item
@@ -464,7 +464,7 @@ public class Menu {
             case 2:
                 //login history
                 System.out.println("Login history");
-                Control.userlogins.get(userName);
+                System.out.println(Control.userlogins.get(userName));
                 break;
             case 3:
                 //Search catalogue
