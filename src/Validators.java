@@ -102,7 +102,7 @@ public class Validators {
 
     public String dateValidate(String dob){
         //Validation of date entered
-        Boolean dateConfirm = false;
+        boolean dateConfirm = false;
         SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy");
         sdf.setLenient(false);
         Date parsedDate = null;

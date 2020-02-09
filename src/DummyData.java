@@ -38,7 +38,7 @@ public class DummyData {
 
 
         //Add dummy item data
-        Boolean available = true;
+
         Book b1 = new Book(1001, "the book", 1.50, "penguin", true, "568-4-82-469267-0", "alber booksworth", "war", 1854);
         Control.books.put(b1.getStockID(), b1);
 

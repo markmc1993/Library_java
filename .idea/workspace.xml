@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9a06fe96-16fe-4598-8a3b-0f52d08f3ee9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logins.ser" beforeDir="false" afterPath="$PROJECT_DIR$/logins.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/Register.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Catalogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Catalogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EditUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DummyData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DummyData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +89,7 @@
       <workItem from="1581075192653" duration="3476000" />
       <workItem from="1581195342702" duration="287000" />
       <workItem from="1581243707744" duration="15359000" />
+      <workItem from="1581276479587" duration="508000" />
     </task>
     <servers />
   </component>
@@ -147,10 +141,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040/-3840.-274.1920.1040@0.0.1920.1040" timestamp="1580948265125" />
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1581243774234">
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1581276479657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-3840.-274.1920.1040@0.0.1920.1040" timestamp="1581243774234" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-3840.-274.1920.1040@0.0.1920.1040" timestamp="1581276479657" />
     <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581075194713" />
     <state x="342" y="141" key="new project wizard" timestamp="1579560032264">
       <screen x="0" y="0" width="1920" height="1040" />
