@@ -459,7 +459,7 @@ public class Menu {
             case 1:
                 //Edit account
                 System.out.println("Edit account");
-                editUser.editMember();
+                editUser.editCasual();
                 break;
             case 2:
                 //login history
@@ -556,15 +556,19 @@ public class Menu {
     private static void editAnItem(int num){
         switch (num){
             case 1:
+                //edit book
                 editItem.editBook();
                 break;
             case 2:
+                //edit cd
                 editItem.editCD();
                 break;
             case 3:
+                //edit journal
                 editItem.editJournal();
                 break;
             case 4:
+                //edit video
                 editItem.editVideo();
                 break;
             case 5:

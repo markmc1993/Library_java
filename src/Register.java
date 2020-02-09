@@ -25,15 +25,15 @@ public class Register {
         System.out.println("Casual register setup");
         System.out.println("Please enter your first name");
         firstName = input.next(); firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
-        val.singleWordValidate(firstName);
+        firstName = val.singleWordValidate(firstName);
         System.out.println("Please enter your last name");
         lastName = input.next(); lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
-        val.singleWordValidate(lastName);
+        lastName = val.singleWordValidate(lastName);
         System.out.println("Please enter your email address");
         email = input.next();
         System.out.println("Please enter your desired password");
         password = input.next();
-        val.passValidate(password);
+        password = val.passValidate(password);
         while (!equalPass){
             System.out.println("Please confirm desired password");
             rePassword = input.next();
@@ -95,6 +95,7 @@ public class Register {
                 System.out.println("Passwords do not match, try again");
                 rePassword = input.next();
             }
+
         }
 
         username = userNameGenerate(firstName, lastName);
@@ -113,7 +114,6 @@ public class Register {
     public void vipRegister(){
         //Get details from user, validate and add to correct user hashmap
         System.out.println("VIP register setup");
-        System.out.println("Member register setup");
         System.out.println("Please enter your first name");
         firstName = input.next(); firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
         val.singleWordValidate(firstName);
@@ -154,8 +154,8 @@ public class Register {
         username = userNameGenerate(firstName, lastName);
         System.out.println("Your username is " + username);
 
-        Member newMem = new Member(firstName, lastName, username, pass.encrypt(password), email, address, postCode, phoneNo, dob);
-        Control.users.put(newMem.getUserName(), newMem);
+        VIPMember newVip = new VIPMember(firstName, lastName, username, pass.encrypt(password), email, address, postCode, phoneNo, dob);
+        Control.users.put(newVip.getUserName(), newVip);
         System.out.println(username + " added to system. Close app and login to confirm");
         Control.userlogins.put(username, new LinkedList<>());
         Control.loans.put(username, new LinkedList<>());
@@ -165,7 +165,7 @@ public class Register {
         ser.Serialization();
     }
 
-    private String userNameGenerate(String fName, String lName){
+    public String userNameGenerate(String fName, String lName){
         return fName.substring(0,1).toLowerCase() + lName.substring(1) + (Control.userlogins.size() + 1);
     }
 }
