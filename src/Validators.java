@@ -122,4 +122,39 @@ public class Validators {
 
         return parsedDate.toString();
     }
+
+    public double doubleValidate(String num){
+        // take string num and check to ensure it is number, parseInt and return if number
+        boolean valid = false;
+        double newNum = 0;
+
+        while (!valid){
+            if (num.matches(".*[0-9]+.*" ) && num.matches(".*[.]+.*")){
+                newNum = Double.parseDouble(num);
+                valid = true;
+            }
+            else{
+                System.out.println("Invalid information entered. Please enter a valid price e.g. 0.5");
+                num = input.next();
+            }
+        }
+
+        return newNum;
+    }
+
+    public String runtimeValidate(String runtime){
+        boolean valid = false;
+        SimpleDateFormat time = new SimpleDateFormat("HH:mm:ss");
+        while(!valid) {
+            if (runtime.matches(time.toString())) {
+                valid = true;
+            }
+            else{
+                System.out.println("Invalid information entered. Please enter a valid runtime (HH:mm:ss");
+                runtime = input.next();
+            }
+        }
+
+        return runtime;
+    }
 }
