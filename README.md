@@ -12,8 +12,8 @@ relevant information depending on user type. With username being made from first
 letter onwards of last name and count of all users +1.
 
 If admin logs in, they have a menu with options to; add a new user, record a loan (unfinished), record a loan being
-returned(unfinished), list all users, list all logins, list all loans, add a new stock item (untested), or edit an
-existing stock item(untested).
+returned(unfinished), list all users, list all logins, list all loans, add a new stock item, or edit an
+existing stock item.
 
 If vip or member logs in, they have a menu with options to; edit their account, view their login history, view their loan
 history(unfinished), reserve a stock item(unfinished), search catalogue, or return item loaned out.
