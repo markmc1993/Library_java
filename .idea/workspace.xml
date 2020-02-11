@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a06fe96-16fe-4598-8a3b-0f52d08f3ee9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books.ser" beforeDir="false" afterPath="$PROJECT_DIR$/books.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cds.ser" beforeDir="false" afterPath="$PROJECT_DIR$/cds.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/journals.ser" beforeDir="false" afterPath="$PROJECT_DIR$/journals.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loanhistories.ser" beforeDir="false" afterPath="$PROJECT_DIR$/loanhistories.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loanouts.ser" beforeDir="false" afterPath="$PROJECT_DIR$/loanouts.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loanrequests.ser" beforeDir="false" afterPath="$PROJECT_DIR$/loanrequests.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loanreturns.ser" beforeDir="false" afterPath="$PROJECT_DIR$/loanreturns.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logins.ser" beforeDir="false" afterPath="$PROJECT_DIR$/logins.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Library/Catalogue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/Catalogue.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Library/DummyData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/DummyData.class" afterDir="false" />
@@ -14,27 +19,8 @@
       <change beforePath="$PROJECT_DIR$/out/production/Library/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Library/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/Register.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Library/Validators.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/Validators.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Catalogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Catalogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Deserialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deserialize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DummyData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DummyData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EditItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EditUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Journal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Journal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Serialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serialize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VIPMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VIPMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Validators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Validators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videos.ser" beforeDir="false" afterPath="$PROJECT_DIR$/videos.ser" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +110,7 @@
       <workItem from="1581357319674" duration="159000" />
       <workItem from="1581376649059" duration="4740000" />
       <workItem from="1581381433844" duration="387000" />
+      <workItem from="1581418498748" duration="7046000" />
     </task>
     <servers />
   </component>
@@ -151,34 +138,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="420" width="356" height="200" key="Github.CreateGistDialog/0.0.1920.1040/-3840.-274.1920.1040@0.0.1920.1040" timestamp="1580945637727" />
-    <state width="1878" height="282" key="GridCell.Tab.0.bottom" timestamp="1581381393526">
+    <state width="1878" height="282" key="GridCell.Tab.0.bottom" timestamp="1581425552490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-274.1920.1040@0.0.1920.1040" timestamp="1581381393526" />
+    <state width="1878" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-274.1920.1040@0.0.1920.1040" timestamp="1581425552490" />
     <state width="1877" height="401" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581078386514" />
-    <state width="1878" height="282" key="GridCell.Tab.0.center" timestamp="1581381393526">
+    <state width="1878" height="282" key="GridCell.Tab.0.center" timestamp="1581425552490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-274.1920.1040@0.0.1920.1040" timestamp="1581381393526" />
+    <state width="1878" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-274.1920.1040@0.0.1920.1040" timestamp="1581425552490" />
     <state width="1877" height="401" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581078386513" />
-    <state width="1878" height="282" key="GridCell.Tab.0.left" timestamp="1581381393526">
+    <state width="1878" height="282" key="GridCell.Tab.0.left" timestamp="1581425552490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-274.1920.1040@0.0.1920.1040" timestamp="1581381393526" />
+    <state width="1878" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-274.1920.1040@0.0.1920.1040" timestamp="1581425552490" />
     <state width="1877" height="401" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581078386513" />
-    <state width="1878" height="282" key="GridCell.Tab.0.right" timestamp="1581381393526">
+    <state width="1878" height="282" key="GridCell.Tab.0.right" timestamp="1581425552490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-274.1920.1040@0.0.1920.1040" timestamp="1581381393526" />
+    <state width="1878" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-274.1920.1040@0.0.1920.1040" timestamp="1581425552490" />
     <state width="1877" height="401" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581078386514" />
     <state x="461" y="163" key="SettingsEditor" timestamp="1580948265125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040/-3840.-274.1920.1040@0.0.1920.1040" timestamp="1580948265125" />
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1581381432721">
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1581418823214">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-3840.-274.1920.1040@0.0.1920.1040" timestamp="1581381432721" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-3840.-274.1920.1040@0.0.1920.1040" timestamp="1581418823214" />
     <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581075194713" />
     <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1581380901494">
       <screen x="0" y="0" width="1920" height="1040" />

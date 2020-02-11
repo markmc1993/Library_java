@@ -1,6 +1,6 @@
 // Menu class
 // Created by Mark McAllister
-// Last update 10/02/2020
+// Last update 11/02/2020
 import java.util.*;
 
 public class Menu {
@@ -281,7 +281,7 @@ public class Menu {
                 selection = 0;
                 while (selection != 5) {
                     System.out.printf("%1s %n %1s %n %1s %n %1s %n %1s %n %1s %n %1s %n %1s %n",
-                            "Enter a number between 1 and 4 to select what you wish to do",
+                            "Enter a number between 1 and 5 to select what you wish to do",
                             "",
                             "1: Edit book",
                             "2: Edit CD",
@@ -354,11 +354,30 @@ public class Menu {
             case 4:
                 //reserve stock item
                 System.out.println("Reserve item");
-                if (Control.loans.get(userName).size() < 6){
-                    newLoan.requestLoan();
+                if ((Control.loans.get(userName).size() + Control.loanrequests.get(userName).size()) < 6){
+                    int selection = 0;
+                    while (selection != 5 && (Control.loanrequests.get(userName).size() + Control.loans.get(userName).size()) < 6) {
+                        System.out.printf("%1s %n %1s %n %1s %n %1s %n %1s %n %1s %n %1s %n %1s %n %1s %n",
+                                "",
+                                "Please enter the number for the type of item you wish to loan out",
+                                "",
+                                "1: Book",
+                                "2: CD",
+                                "3: Journal",
+                                "4: Video",
+                                "5: Cancel",
+                                "");
+
+                        userInput = input.nextLine();
+                        selection = val.menuValidate(userInput);
+
+                        newLoan.requestLoan(selection);
+                        ser.Serialization();
+                    }
+
                 }
                 else{
-                    System.out.println("You have maxed out the number of items you can loan at one time.");
+                    System.out.println("You have maxed out the number of items you can loan or request at one time.");
                 }
                 break;
             case 5:
@@ -426,11 +445,29 @@ public class Menu {
             case 4:
                 //reserve stock item
                 System.out.println("Reserve item");
-                if (Control.loans.get(userName).size() < 6){
-                    newLoan.requestLoan();
+                if ((Control.loans.get(userName).size() + Control.loanrequests.get(userName).size()) < 4){
+                    int selection = 0;
+                    while (selection != 5 && (Control.loanrequests.get(userName).size() + Control.loans.get(userName).size()) < 4) {
+                        System.out.printf("%1s %n %1s %n %1s %n %1s %n %1s %n %1s %n %1s %n %1s %n %1s %n",
+                                "",
+                                "Please enter the number for the type of item you wish to loan out",
+                                "",
+                                "1: Book",
+                                "2: CD",
+                                "3: Journal",
+                                "4: Video",
+                                "5: Cancel",
+                                "");
+
+                        userInput = input.nextLine();
+                        selection = val.menuValidate(userInput);
+
+                        newLoan.requestLoan(selection);
+                        ser.Serialization();
+                    }
                 }
                 else{
-                    System.out.println("You have maxed out the number of items you can loan at one time.");
+                    System.out.println("You have maxed out the number of items you can loan or request at one time.");
                 }
                 break;
             case 5:
