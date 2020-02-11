@@ -1,7 +1,9 @@
-import java.io.Serializable;
+// Library program with serialized data
+// Created by Mark McAllister
+// Last update 10/02/2020
+
 import java.util.*;
 
-import static java.lang.Integer.parseInt;
 
 public class Catalogue {
     private static Scanner input = new Scanner(System.in); //Setup user input
@@ -71,7 +73,6 @@ public class Catalogue {
                 found = false;
                 System.out.println("View book info");
                 System.out.println("Please enter the item ID or title to view information of the book");
-                input.nextLine();
                 bookInput = input.nextLine();
                 while (!found) {
                     for (Map.Entry<Integer, Book> entry : Control.books.entrySet()) {
@@ -102,7 +103,6 @@ public class Catalogue {
                 found = false;
                 System.out.println("View CD info");
                 System.out.println("Please enter the item ID or title to view information of the CD");
-                input.nextLine();
                 cdInput = input.nextLine();
                 while (!found) {
                     for (Map.Entry<Integer, CD> entry : Control.cds.entrySet()) {
@@ -133,7 +133,6 @@ public class Catalogue {
                 found = false;
                 System.out.println("View journal info");
                 System.out.println("Please enter the item ID or title to view information of the journal");
-                input.nextLine();
                 journalInput = input.nextLine();
                 while (!found) {
                     for (Map.Entry<Integer, Journal> entry : Control.journals.entrySet()) {
@@ -164,7 +163,6 @@ public class Catalogue {
                 found = false;
                 System.out.println("View video info");
                 System.out.println("Please enter the item ID or title to view information of the video");
-                input.nextLine();
                 videoInput = input.nextLine();
                 while (!found) {
                     for (Map.Entry<Integer, Video> entry : Control.videos.entrySet()) {

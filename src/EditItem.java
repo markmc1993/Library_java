@@ -1,3 +1,6 @@
+// Edit item class
+// Created by Mark McAllister
+// Last update 10/02/2020
 import java.util.Map;
 import java.util.Scanner;
 
@@ -33,27 +36,24 @@ public class EditItem {
 
         System.out.println("Add book");
         System.out.println("Please enter the title of the book");
-        input.nextLine();
         title = input.nextLine();
         title = val.multiWordValidate(title);
         System.out.println("Please enter the price in £");
-        costPrice = input.next();
+        costPrice = input.nextLine();
         price = val.doubleValidate(costPrice);
         System.out.println("Please enter the publisher");
-        publisher = input.next();
+        publisher = input.nextLine();
         val.singleWordValidate(publisher);
         System.out.println("Please enter the ISBN");
-        isbn = input.next();
+        isbn = input.nextLine();
         System.out.println("Please enter the author");
-        input.nextLine();
         author = input.nextLine();
         author = val.multiWordValidate(author);
         System.out.println("Please enter the subject area");
-        input.nextLine();
         subjectArea = input.nextLine();
         subjectArea = val.multiWordValidate(subjectArea);
         System.out.println("Please enter the number of pages");
-        pageNo = input.next();
+        pageNo = input.nextLine();
         pages = val.menuValidate(pageNo);
         stockID = 1000 + Control.books.size() + Control.cds.size() + Control.journals.size() + Control.videos.size() + 1;
 
@@ -67,29 +67,28 @@ public class EditItem {
     public void addCD(){
         System.out.println("Add cd");
         System.out.println("Please enter the title of the cd");
-        input.nextLine();
         title = input.nextLine();
         title = val.multiWordValidate(title);
         System.out.println("Please enter the price in £");
-        costPrice = input.next();
+        costPrice = input.nextLine();
         price = val.doubleValidate(costPrice);
         System.out.println("Please enter the publisher");
-        publisher = input.next();
+        publisher = input.nextLine();
         val.singleWordValidate(publisher);
         System.out.println("Please enter the runtime HH:mm:ss");
-        runtime = input.next();
+        runtime = input.nextLine();
         runtime = val.runtimeValidate(runtime);
         System.out.println("Please enter the CD type");
         cdType = input.nextLine();
         cdType = val.singleWordValidate(cdType);
         System.out.println("Please enter the number of tracks");
-        tracks = input.next();
+        tracks = input.nextLine();
         numTracks = val.menuValidate(tracks);
         System.out.println("Please enter the artist");
-        artist = input.next();
+        artist = input.nextLine();
         artist = val.multiWordValidate(artist);
         System.out.println("Please enter the case type");
-        caseType = input.next();
+        caseType = input.nextLine();
         val.singleWordValidate(caseType);
         stockID = 1000 + Control.books.size() + Control.cds.size() + Control.journals.size() + Control.videos.size() + 1;
 
@@ -104,17 +103,16 @@ public class EditItem {
 
         System.out.println("Add journal");
         System.out.println("Please enter the title of the journal");
-        input.nextLine();
         title = input.nextLine();
         title = val.multiWordValidate(title);
         System.out.println("Please enter the price in £");
-        costPrice = input.next();
+        costPrice = input.nextLine();
         price = val.doubleValidate(costPrice);
         System.out.println("Please enter the publisher");
-        publisher = input.next();
+        publisher = input.nextLine();
         val.singleWordValidate(publisher);
         System.out.println("Please enter the ISSN");
-        isbn = input.next();
+        isbn = input.nextLine();
         System.out.println("Please enter the issue number");
         issue = input.nextLine();
         issueNo = val.menuValidate(issue);
@@ -122,11 +120,10 @@ public class EditItem {
         issueDate = input.nextLine();
         issueDate = val.dateValidate(issueDate);
         System.out.println("Please enter the subject area");
-        input.nextLine();
         subjectArea = input.nextLine();
         subjectArea = val.multiWordValidate(subjectArea);
         System.out.println("Please enter the number of pages");
-        pageNo = input.next();
+        pageNo = input.nextLine();
         pages = val.menuValidate(pageNo);
         stockID = 1000 + Control.books.size() + Control.cds.size() + Control.journals.size() + Control.videos.size() + 1;
 
@@ -139,27 +136,25 @@ public class EditItem {
     public void addVideo(){
         System.out.println("Add video");
         System.out.println("Please enter the title of the video");
-        input.nextLine();
         title = input.nextLine();
         title = val.multiWordValidate(title);
         System.out.println("Please enter the price in £");
-        costPrice = input.next();
+        costPrice = input.nextLine();
         price = val.doubleValidate(costPrice);
         System.out.println("Please enter the publisher");
-        publisher = input.next();
+        publisher = input.nextLine();
         val.singleWordValidate(publisher);
         System.out.println("Please enter the runtime HH:mm:ss");
-        runtime = input.next();
+        runtime = input.nextLine();
         runtime = val.runtimeValidate(runtime);
         System.out.println("Please enter the video format");
         format = input.nextLine();
         format = val.singleWordValidate(format);
         System.out.println("Please enter the genre");
-        input.nextLine();
         genre = input.nextLine();
         genre = val.multiWordValidate(genre);
         System.out.println("Please enter the case type");
-        caseType = input.next();
+        caseType = input.nextLine();
         val.singleWordValidate(caseType);
         stockID = 1000 + Control.books.size() + Control.cds.size() + Control.journals.size() + Control.videos.size() + 1;
 
@@ -174,7 +169,6 @@ public class EditItem {
         System.out.println("Edit book");
         int selection = 0;
         System.out.println("Enter book title or stock ID");
-        input.nextLine();
         boolean found = false;
         String bookInput = input.nextLine();
         while(!found) {
@@ -193,7 +187,7 @@ public class EditItem {
                                 "7: Edit page number",
                                 "8: Cancel",
                                 "");
-                        choice = input.next();
+                        choice = input.nextLine();
                         selection = val.menuValidate(choice);
                         processBook(selection, entry.getKey());
                         found = true;
@@ -213,7 +207,6 @@ public class EditItem {
         int selection = 0;
         boolean found = false;
         System.out.println("Enter CD title or stock ID");
-        input.nextLine();
         String cdInput = input.nextLine();
         while (!found) {
             for (Map.Entry<Integer, CD> entry : Control.cds.entrySet()) {
@@ -232,7 +225,7 @@ public class EditItem {
                                 "8: Edit case type",
                                 "9: Cancel",
                                 "");
-                        choice = input.next();
+                        choice = input.nextLine();
                         selection = val.menuValidate(choice);
                         processCD(selection, entry.getKey());
                         found = true;
@@ -252,7 +245,6 @@ public class EditItem {
         int selection = 0;
         boolean found = false;
         System.out.println("Enter journal title or stock ID");
-        input.nextLine();
         String journalInput = input.nextLine();
         while (!found) {
             for (Map.Entry<Integer, Journal> entry : Control.journals.entrySet()) {
@@ -271,7 +263,7 @@ public class EditItem {
                                 "8: Edit number of pages",
                                 "9: Cancel",
                                 "");
-                        choice = input.next();
+                        choice = input.nextLine();
                         selection = val.menuValidate(choice);
                         processJournal(selection, entry.getKey());
                         found = true;
@@ -291,7 +283,6 @@ public class EditItem {
         int selection = 0;
         boolean found = false;
         System.out.println("Enter CD title or stock ID");
-        input.nextLine();
         String videoInput = input.nextLine();
         while (!found) {
             for (Map.Entry<Integer, Video> entry : Control.videos.entrySet()) {
@@ -309,7 +300,7 @@ public class EditItem {
                                 "7: Edit case type",
                                 "8: Cancel",
                                 "");
-                        choice = input.next();
+                        choice = input.nextLine();
                         selection = val.menuValidate(choice);
                         processVideo(selection, entry.getKey());
                         found = true;
@@ -328,7 +319,6 @@ public class EditItem {
             case 1:
                 //edit title
                 System.out.println("Please enter the new title");
-                input.nextLine();
                 title = input.nextLine();
                 title = val.multiWordValidate(title);
                 Control.books.get(id).setTitle(title);
@@ -336,28 +326,27 @@ public class EditItem {
             case 2:
                 //edit price
                 System.out.println("Please enter the new price");
-                costPrice = input.next();
+                costPrice = input.nextLine();
                 price = val.doubleValidate(costPrice);
                 Control.books.get(id).setCost(price);
                 break;
             case 3:
                 //edit publisher
                 System.out.println("Please enter the new publisher");
-                publisher = input.next();
+                publisher = input.nextLine();
                 publisher = val.singleWordValidate(publisher);
                 Control.books.get(id).setPublisher(publisher);
                 break;
             case 4:
                 //edit isbn
                 System.out.println("Please enter the new ISBN");
-                isbn = input.next();
+                isbn = input.nextLine();
                 isbn = val.singleWordValidate(isbn);
                 Control.books.get(id).setIsbn(isbn);
                 break;
             case 5:
                 //edit author
                 System.out.println("Please enter the new author");
-                input.nextLine();
                 author = input.nextLine();
                 author = val.multiWordValidate(author);
                 Control.books.get(id).setAuthor(author);
@@ -365,7 +354,6 @@ public class EditItem {
             case 6:
                 //edit subject area
                 System.out.println("Please enter the new subject area");
-                input.nextLine();
                 subjectArea = input.nextLine();
                 subjectArea = val.multiWordValidate(subjectArea);
                 Control.books.get(id).setSubjectArea(subjectArea);
@@ -373,7 +361,7 @@ public class EditItem {
             case 7:
                 //edit number of pages
                 System.out.println("Please enter the new number of pages");
-                pageNo = input.next();
+                pageNo = input.nextLine();
                 pages = val.menuValidate(pageNo);
                 Control.books.get(id).setNumPages(pages);
                 break;
@@ -390,7 +378,6 @@ public class EditItem {
             case 1:
                 //edit title
                 System.out.println("Please enter the new title");
-                input.nextLine();
                 title = input.nextLine();
                 title = val.multiWordValidate(title);
                 Control.journals.get(id).setTitle(title);
@@ -398,50 +385,48 @@ public class EditItem {
             case 2:
                 //edit price
                 System.out.println("Please enter the new price");
-                costPrice = input.next();
+                costPrice = input.nextLine();
                 price = val.doubleValidate(costPrice);
                 Control.journals.get(id).setCost(price);
                 break;
             case 3:
                 //edit publisher
                 System.out.println("Please enter the new publisher");
-                publisher = input.next();
+                publisher = input.nextLine();
                 publisher = val.singleWordValidate(publisher);
                 Control.journals.get(id).setPublisher(publisher);
                 break;
             case 4:
                 //edit runtime
                 System.out.println("Please enter the new runtime");
-                runtime = input.next();
+                runtime = input.nextLine();
                 runtime = val.runtimeValidate(runtime);
                 Control.cds.get(id).setRunTime(runtime);
                 break;
             case 5:
                 //edit cd type
                 System.out.println("Please enter the new cd type");
-                cdType = input.next();
+                cdType = input.nextLine();
                 cdType = val.singleWordValidate(cdType);
                 Control.cds.get(id).setCdType(cdType);
                 break;
             case 6:
                 //edit number of tracks
                 System.out.println("Please enter the new number of tracks");
-                tracks = input.next();
+                tracks = input.nextLine();
                 numTracks = val.menuValidate(tracks);
                 Control.cds.get(id).setNumTracks(numTracks);
                 break;
             case 7:
                 //edit artist
                 System.out.println("Please enter the new artist");
-                input.nextLine();
-                artist = input.nextLine();
                 artist = val.multiWordValidate(artist);
                 Control.cds.get(id).setArtist(artist);
                 break;
             case 8:
                 //edit case type
                 System.out.println("Please enter the new case type");
-                caseType = input.next();
+                caseType = input.nextLine();
                 caseType = val.singleWordValidate(cdType);
                 Control.cds.get(id).setCaseType(caseType);
                 break;
@@ -458,57 +443,55 @@ public class EditItem {
             case 1:
                 //edit title
                 System.out.println("Please enter the new title");
-                input.nextLine();
-                title = input.nextLine();
                 title = val.multiWordValidate(title);
                 Control.journals.get(id).setTitle(title);
                 break;
             case 2:
                 //edit price
                 System.out.println("Please enter the new price");
-                costPrice = input.next();
+                costPrice = input.nextLine();
                 price = val.doubleValidate(costPrice);
                 Control.journals.get(id).setCost(price);
                 break;
             case 3:
                 //edit publisher
                 System.out.println("Please enter the new publisher");
-                publisher = input.next();
+                publisher = input.nextLine();
                 publisher = val.singleWordValidate(publisher);
                 Control.journals.get(id).setPublisher(publisher);
                 break;
             case 4:
                 //edit issn
                 System.out.println("Please enter the new ISSN");
-                isbn = input.next();
+                isbn = input.nextLine();
                 isbn = val.singleWordValidate(isbn);
                 Control.journals.get(id).setIssn(isbn);
                 break;
             case 5:
                 //edit issue number
                 System.out.println("Please enter the new issue number");
-                issue = input.next();
+                issue = input.nextLine();
                 issueNo = val.menuValidate(issue);
                 Control.journals.get(id).setIssueNo(issueNo);
                 break;
             case 6:
                 //edit issue date
                 System.out.println("Please enter the new issue date ddmmyyyy");
-                issueDate = input.next();
+                issueDate = input.nextLine();
                 issueDate = val.dateValidate(issueDate);
                 Control.journals.get(id).setIssueDate(issueDate);
                 break;
             case 7:
                 //edit subject area
                 System.out.println("Please enter the new subject area");
-                subjectArea = input.next();
+                subjectArea = input.nextLine();
                 subjectArea = val.singleWordValidate(subjectArea);
                 Control.journals.get(id).setSubjectArea(subjectArea);
                 break;
             case 8:
                 //edit number of pages
                 System.out.println("Please enter the new number of pages");
-                pageNo = input.next();
+                pageNo = input.nextLine();
                 pages = val.menuValidate(pageNo);
                 Control.books.get(id).setNumPages(pages);
                 break;
@@ -525,7 +508,6 @@ public class EditItem {
             case 1:
                 //edit title
                 System.out.println("Please enter the new title");
-                input.nextLine();
                 title = input.nextLine();
                 title = val.multiWordValidate(title);
                 Control.videos.get(id).setTitle(title);
@@ -533,35 +515,34 @@ public class EditItem {
             case 2:
                 //edit price
                 System.out.println("Please enter the new price");
-                costPrice = input.next();
+                costPrice = input.nextLine();
                 price = val.doubleValidate(costPrice);
                 Control.videos.get(id).setCost(price);
                 break;
             case 3:
                 //edit publisher
                 System.out.println("Please enter the new publisher");
-                publisher = input.next();
+                publisher = input.nextLine();
                 publisher = val.singleWordValidate(publisher);
                 Control.videos.get(id).setPublisher(publisher);
                 break;
             case 4:
                 //edit runtime
                 System.out.println("Please enter the new runtime");
-                runtime = input.next();
+                runtime = input.nextLine();
                 runtime = val.runtimeValidate(runtime);
                 Control.videos.get(id).setRunTime(runtime);
                 break;
             case 5:
                 //edit format
                 System.out.println("Please enter the new format");
-                format = input.next();
+                format = input.nextLine();
                 format = val.singleWordValidate(format);
                 Control.videos.get(id).setVideoFormat(format);
                 break;
             case 6:
                 //edit genre
                 System.out.println("Please enter the new genre");
-                input.nextLine();
                 genre = input.nextLine();
                 genre = val.multiWordValidate(genre);
                 Control.videos.get(id).setGenre(genre);
@@ -569,7 +550,7 @@ public class EditItem {
             case 7:
                 //edit case type
                 System.out.println("Please enter the new case type");
-                caseType = input.next();
+                caseType = input.nextLine();
                 caseType = val.singleWordValidate(cdType);
                 Control.videos.get(id).setCaseType(caseType);
                 break;

@@ -1,3 +1,6 @@
+// Loan class
+// Created by Mark McAllister
+// Last update 10/02/2020
 public class Loan {
 
     public void loanOut(){

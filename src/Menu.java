@@ -1,3 +1,6 @@
+// Menu class
+// Created by Mark McAllister
+// Last update 10/02/2020
 import java.util.*;
 
 public class Menu {
@@ -24,7 +27,7 @@ public class Menu {
                     "3: Cancel",
                     "");
 
-            userInput = input.next();
+            userInput = input.nextLine();
             selection = val.menuValidate(userInput);
 
             if (selection != 3) {
@@ -43,12 +46,12 @@ public class Menu {
                 PassEncrypt p1 = new PassEncrypt();
                 while (attempts < 3){
                     System.out.println("Please enter your username");
-                    userName = input.next();
+                    userName = input.nextLine();
                     val.singleWordValidate(userName);
                     if (Control.admins.containsKey(userName)){
                         //validate admin login
                         System.out.println("Please enter your password");
-                        password = input.next();
+                        password = input.nextLine();
                         val.singleWordValidate(password);
                         if (Control.admins.get(userName).getPassword().equals(p1.encrypt(password))){
                             adminMenu();
@@ -61,7 +64,7 @@ public class Menu {
                     else if (Control.vipmembers.containsKey(userName)){
                         //validate vipMember login
                         System.out.println("Please enter your password");
-                        password = input.next();
+                        password = input.nextLine();
                         val.singleWordValidate(password);
                         if (Control.vipmembers.get(userName).getPassword().equals(p1.encrypt(password))){
                             vipMemberMenu();
@@ -75,7 +78,7 @@ public class Menu {
                     else if (Control.members.containsKey(userName)){
                         //validate member login
                         System.out.println("Please enter your password");
-                        password = input.next();
+                        password = input.nextLine();
                         val.singleWordValidate(password);
                         if (Control.members.get(userName).getPassword().equals(p1.encrypt(password))){
                             memberMenu();
@@ -89,7 +92,7 @@ public class Menu {
                     else if (Control.users.containsKey(userName)){
                         //validate casual user login
                         System.out.println("Please enter your password");
-                        password = input.next();
+                        password = input.nextLine();
                         val.singleWordValidate(password);
                         if (Control.users.get(userName).getPassword().equals(p1.encrypt(password))){
                             casualMenu();
@@ -121,7 +124,7 @@ public class Menu {
                             "4: Cancel",
                             "");
 
-                    userInput = input.next();
+                    userInput = input.nextLine();
                     selection = val.menuValidate(userInput);
 
                     registerChoice(selection);
@@ -155,7 +158,7 @@ public class Menu {
                     "9: Cancel",
                     "");
 
-            userInput = input.next();
+            userInput = input.nextLine();
             selection = val.menuValidate(userInput);
 
             adminChoice(selection);
@@ -181,7 +184,7 @@ public class Menu {
                             "4: Cancel",
                             "");
 
-                    userInput = input.next();
+                    userInput = input.nextLine();
                     selection = val.menuValidate(userInput);
 
                     createUserChoice(selection);
@@ -246,7 +249,7 @@ public class Menu {
                             "5: Cancel",
                             "");
 
-                    userInput = input.next();
+                    userInput = input.nextLine();
                     selection = val.menuValidate(userInput);
 
                     createItem(selection);
@@ -256,6 +259,25 @@ public class Menu {
             case 8:
                 //Edit item
                 System.out.println("Edit Stock item");
+                System.out.println("Here are the stock IDs and item names");
+                for (Map.Entry<Integer, Book> entry : Control.books.entrySet()) {
+                    System.out.println("Book ID: " + entry.getKey() + ". Book title: " + entry.getValue().getTitle());
+                }
+                System.out.println();
+                System.out.println("These are the CDs we have");
+                for (Map.Entry<Integer, CD> entry : Control.cds.entrySet()) {
+                    System.out.println("CD ID: " + entry.getKey() + ". CD title: " + entry.getValue().getTitle());
+                }
+                System.out.println();
+                System.out.println("These are the journals we have");
+                for (Map.Entry<Integer, Journal> entry : Control.journals.entrySet()) {
+                    System.out.println("Journal ID: " + entry.getKey() + ". Journal title: " + entry.getValue().getTitle());
+                }
+                System.out.println();
+                System.out.println("These are the videos we have");
+                for (Map.Entry<Integer, Video> entry : Control.videos.entrySet()) {
+                    System.out.println("Video ID: " + entry.getKey() + ". Video title: " + entry.getValue().getTitle());
+                }
                 selection = 0;
                 while (selection != 5) {
                     System.out.printf("%1s %n %1s %n %1s %n %1s %n %1s %n %1s %n %1s %n %1s %n",
@@ -268,7 +290,7 @@ public class Menu {
                             "5: Cancel",
                             "");
 
-                    userInput = input.next();
+                    userInput = input.nextLine();
                     selection = val.menuValidate(userInput);
 
                     editAnItem(selection);
@@ -303,7 +325,7 @@ public class Menu {
                     "7: Logout",
                     "");
 
-            userInput = input.next();
+            userInput = input.nextLine();
             selection = val.menuValidate(userInput);
 
             vipMemberChoice(selection);
@@ -376,7 +398,7 @@ public class Menu {
                     "7: Logout",
                     "");
 
-            userInput = input.next();
+            userInput = input.nextLine();
             selection = val.menuValidate(userInput);
 
             memberChoice(selection);
@@ -445,7 +467,7 @@ public class Menu {
                     "4: Cancel",
                     "");
 
-            userInput = input.next();
+            userInput = input.nextLine();
             selection = val.menuValidate(userInput);
 
             casualChoice(selection);

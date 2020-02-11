@@ -1,3 +1,6 @@
+// VIP member class
+// Created by Mark McAllister
+// Last update 10/02/2020
 public class VIPMember extends User {
     private String address;
     private String postcode;

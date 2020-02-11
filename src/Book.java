@@ -1,3 +1,6 @@
+// Book class
+// Created by Mark McAllister
+// Last update 10/02/2020
 public class Book extends Item {
 
     private String isbn;

@@ -1,3 +1,6 @@
+// Validator class
+// Created by Mark McAllister
+// Last update 10/02/2020
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -19,7 +22,7 @@ public class Validators {
             }
             else{
                 System.out.println("Invalid information entered. Please enter a number");
-                num = input.next();
+                num = input.nextLine();
             }
         }
 
@@ -33,7 +36,7 @@ public class Validators {
         while (!valid){
             if (word.length() < 1){
                 System.out.println("Nothing entered. Enter information please.");
-                word = input.next(); word = word.substring(0, 1).toUpperCase() + word.substring(1);
+                word = input.nextLine(); word = word.substring(0, 1).toUpperCase() + word.substring(1);
             }
             else{
                 valid = true;
@@ -76,7 +79,7 @@ public class Validators {
                         "Lowercase character",
                         "A number",
                         "Special character");
-                pass = input.next();
+                pass = input.nextLine();
             }
         }
 
@@ -93,7 +96,7 @@ public class Validators {
             }
             else{
                 System.out.println("Invalid information entered. Please enter numbers only");
-                num = input.next();
+                num = input.nextLine();
             }
         }
 
@@ -114,7 +117,7 @@ public class Validators {
                 dateConfirm = true;
             } catch (Exception e){
                 System.out.println("Invalid date entry, enter ddmmyyyy");
-                dob = input.next().toLowerCase(); input.nextLine();
+                dob = input.nextLine();
             }
 
 
@@ -135,7 +138,7 @@ public class Validators {
             }
             else{
                 System.out.println("Invalid information entered. Please enter a valid price e.g. 0.5");
-                num = input.next();
+                num = input.nextLine();
             }
         }
 
@@ -145,13 +148,14 @@ public class Validators {
     public String runtimeValidate(String runtime){
         boolean valid = false;
         SimpleDateFormat time = new SimpleDateFormat("HH:mm:ss");
+        Date parsedDate = null;
         while(!valid) {
-            if (runtime.matches(time.toString())) {
+            try {
+                parsedDate = time.parse(runtime);
                 valid = true;
-            }
-            else{
-                System.out.println("Invalid information entered. Please enter a valid runtime (HH:mm:ss");
-                runtime = input.next();
+            } catch (Exception e){
+                System.out.println("Invalid date entry, enter HH:mm:ss");
+                runtime = input.nextLine();
             }
         }
 

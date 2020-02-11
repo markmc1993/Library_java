@@ -1,3 +1,6 @@
+// Library program with serialized data
+// Created by Mark McAllister
+// Last update 10/02/2020
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -24,27 +27,26 @@ public class EditUser {
         //Admin adding vip with required info
         System.out.println("Add VIP");
         System.out.println("Please enter first name");
-        firstName = input.next(); firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
+        firstName = input.nextLine(); firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
         firstName = val.singleWordValidate(firstName);
         System.out.println("Please enter last name");
-        lastName = input.next(); lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
+        lastName = input.nextLine(); lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
         lastName = val.singleWordValidate(lastName);
         System.out.println("Please enter email address");
-        email = input.next();
+        email = input.nextLine();
         System.out.println("Please enter address");
-        input.nextLine();
         address = input.nextLine();
         address = val.multiWordValidate(address);
         System.out.println("Please enter postcode");
         postCode = input.next().toUpperCase();
         System.out.println("Please enter phone number");
-        phoneNo = input.next();
+        phoneNo = input.nextLine();
         phoneNo = val.phoneValidate(phoneNo);
         System.out.println("Please enter date of birth (ddmmyyyy)");
-        dob = input.next();
+        dob = input.nextLine();
         dob = val.dateValidate(dob);
         System.out.println("Please enter password");
-        password = input.next();
+        password = input.nextLine();
 
         username = reg.userNameGenerate(firstName, lastName);
         System.out.println("The username is " + username);
@@ -62,27 +64,26 @@ public class EditUser {
         //Admin adding member with required info
         System.out.println("Add member");
         System.out.println("Please enter first name");
-        firstName = input.next(); firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
+        firstName = input.nextLine(); firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
         firstName = val.singleWordValidate(firstName);
         System.out.println("Please enter last name");
-        lastName = input.next(); lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
+        lastName = input.nextLine(); lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
         lastName = val.singleWordValidate(lastName);
         System.out.println("Please enter email address");
-        email = input.next();
+        email = input.nextLine();
         System.out.println("Please enter address");
-        input.nextLine();
         address = input.nextLine();
         address = val.multiWordValidate(address);
         System.out.println("Please enter postcode");
         postCode = input.next().toUpperCase();
         System.out.println("Please enter phone number");
-        phoneNo = input.next();
+        phoneNo = input.nextLine();
         phoneNo = val.phoneValidate(phoneNo);
         System.out.println("Please enter date of birth (ddmmyyyy)");
-        dob = input.next();
+        dob = input.nextLine();
         dob = val.dateValidate(dob);
         System.out.println("Please enter password");
-        password = input.next();
+        password = input.nextLine();
 
         username = reg.userNameGenerate(firstName, lastName);
         System.out.println("The username is " + username);
@@ -100,15 +101,15 @@ public class EditUser {
         //Admin adding casual user with required info
         System.out.println("Add casual");
         System.out.println("Please enter first name");
-        firstName = input.next(); firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
+        firstName = input.nextLine(); firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
         firstName = val.singleWordValidate(firstName);
         System.out.println("Please enter last name");
-        lastName = input.next(); lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
+        lastName = input.nextLine(); lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
         lastName = val.singleWordValidate(lastName);
         System.out.println("Please enter email address");
-        email = input.next();
+        email = input.nextLine();
         System.out.println("Please enter password");
-        password = input.next();
+        password = input.nextLine();
 
         username = reg.userNameGenerate(firstName, lastName);
         System.out.println("The username is " + username);
@@ -136,7 +137,7 @@ public class EditUser {
                 "6: Edit password",
                 "7: Cancel",
                 "");
-            choice = input.next();
+            choice = input.nextLine();
             selection = val.menuValidate(choice);
             processVip(selection);
         }
@@ -158,7 +159,7 @@ public class EditUser {
                     "6: Edit password",
                     "7: Cancel",
                     "");
-            choice = input.next();
+            choice = input.nextLine();
             selection = val.menuValidate(choice);
             processMember(selection);
         }
@@ -178,7 +179,7 @@ public class EditUser {
                     "4: Edit password",
                     "5: Cancel",
                     "");
-            choice = input.next();
+            choice = input.nextLine();
             selection = val.menuValidate(choice);
             processCasual(selection);
         }
@@ -190,7 +191,7 @@ public class EditUser {
                 //Edit first name
                 System.out.println("Edit first name");
                 System.out.println("Please enter your first name");
-                firstName = input.next();
+                firstName = input.nextLine();
                 firstName = val.singleWordValidate(firstName);
                 Control.vipmembers.get(Control.userInput).setFirstName(firstName);
                 break;
@@ -198,7 +199,7 @@ public class EditUser {
                 //Edit last name
                 System.out.println("Edit last name");
                 System.out.println("Please enter your last name");
-                lastName = input.next();
+                lastName = input.nextLine();
                 lastName = val.singleWordValidate(lastName);
                 Control.vipmembers.get(Control.userInput).setLastName(lastName);
                 break;
@@ -206,18 +207,17 @@ public class EditUser {
                 //Edit email
                 System.out.println("Edit email");
                 System.out.println("Please enter your email");
-                email = input.next();
+                email = input.nextLine();
                 Control.vipmembers.get(Control.userInput).setEmail(email);
                 break;
             case 4:
                 //Edit address
                 System.out.println("Edit address");
                 System.out.println("Please enter your address");
-                input.nextLine();
                 address = input.nextLine();
                 address = val.multiWordValidate(address);
                 System.out.println("Please enter your postcode");
-                postCode = input.next();
+                postCode = input.nextLine();
                 Control.vipmembers.get(Control.userInput).setAddress(address);
                 Control.vipmembers.get(Control.userInput).setPostcode(postCode);
                 break;
@@ -225,24 +225,24 @@ public class EditUser {
                 //Edit phone number
                 System.out.println("Edit phone number");
                 System.out.println("Please enter your phone number");
-                phoneNo = input.next();
+                phoneNo = input.nextLine();
                 phoneNo = val.phoneValidate(phoneNo);
                 break;
             case 6:
                 //Edit password
                 System.out.println("Edit password");
                 System.out.println("Please enter your password");
-                password = input.next();
+                password = input.nextLine();
                 password = val.passValidate(password);
                 while (!equalPass) {
                     System.out.println("Please confirm desired password");
-                    rePassword = input.next();
+                    rePassword = input.nextLine();
                     if (password.equals(rePassword)) {
                         System.out.println("Passwords match");
                         equalPass = true;
                     } else {
                         System.out.println("Passwords do not match, try again");
-                        rePassword = input.next();
+                        rePassword = input.nextLine();
                     }
                 }
                 Control.vipmembers.get(Control.userInput).setPassword(pass.encrypt(password));
@@ -262,7 +262,7 @@ public class EditUser {
                 //Edit first name
                 System.out.println("Edit first name");
                 System.out.println("Please enter your first name");
-                firstName = input.next();
+                firstName = input.nextLine();
                 firstName = val.singleWordValidate(firstName);
                 Control.members.get(Control.userInput).setFirstName(firstName);
                 break;
@@ -270,7 +270,7 @@ public class EditUser {
                 //Edit last name
                 System.out.println("Edit last name");
                 System.out.println("Please enter your last name");
-                lastName = input.next();
+                lastName = input.nextLine();
                 lastName = val.singleWordValidate(lastName);
                 Control.members.get(Control.userInput).setLastName(lastName);
                 break;
@@ -278,18 +278,17 @@ public class EditUser {
                 //Edit email
                 System.out.println("Edit email");
                 System.out.println("Please enter your email");
-                email = input.next();
+                email = input.nextLine();
                 Control.members.get(Control.userInput).setEmail(email);
                 break;
             case 4:
                 //Edit address
                 System.out.println("Edit address");
                 System.out.println("Please enter your address");
-                input.nextLine();
                 address = input.nextLine();
                 address = val.multiWordValidate(address);
                 System.out.println("Please enter your postcode");
-                postCode = input.next();
+                postCode = input.nextLine();
                 Control.members.get(Control.userInput).setAddress(address);
                 Control.members.get(Control.userInput).setPostcode(postCode);
                 break;
@@ -297,24 +296,24 @@ public class EditUser {
                 //Edit phone number
                 System.out.println("Edit phone number");
                 System.out.println("Please enter your phone number");
-                phoneNo = input.next();
+                phoneNo = input.nextLine();
                 phoneNo = val.phoneValidate(phoneNo);
                 break;
             case 6:
                 //Edit password
                 System.out.println("Edit password");
                 System.out.println("Please enter your password");
-                password = input.next();
+                password = input.nextLine();
                 password = val.passValidate(password);
                 while (!equalPass) {
                     System.out.println("Please confirm desired password");
-                    rePassword = input.next();
+                    rePassword = input.nextLine();
                     if (password.equals(rePassword)) {
                         System.out.println("Passwords match");
                         equalPass = true;
                     } else {
                         System.out.println("Passwords do not match, try again");
-                        rePassword = input.next();
+                        rePassword = input.nextLine();
                     }
                 }
                 Control.members.get(Control.userInput).setPassword(pass.encrypt(password));
@@ -334,7 +333,7 @@ public class EditUser {
                 //Edit first name
                 System.out.println("Edit first name");
                 System.out.println("Please enter your first name");
-                firstName = input.next();
+                firstName = input.nextLine();
                 firstName = val.singleWordValidate(firstName);
                 Control.users.get(Control.userInput).setFirstName(firstName);
                 break;
@@ -342,7 +341,7 @@ public class EditUser {
                 //Edit last name
                 System.out.println("Edit last name");
                 System.out.println("Please enter your last name");
-                lastName = input.next();
+                lastName = input.nextLine();
                 lastName = val.singleWordValidate(lastName);
                 Control.users.get(Control.userInput).setLastName(lastName);
                 break;
@@ -350,24 +349,24 @@ public class EditUser {
                 //Edit email
                 System.out.println("Edit email");
                 System.out.println("Please enter your email");
-                email = input.next();
+                email = input.nextLine();
                 Control.users.get(Control.userInput).setEmail(email);
                 break;
             case 4:
                 //Edit password
                 System.out.println("Edit password");
                 System.out.println("Please enter your password");
-                password = input.next();
+                password = input.nextLine();
                 password = val.passValidate(password);
                 while (!equalPass) {
                     System.out.println("Please confirm desired password");
-                    rePassword = input.next();
+                    rePassword = input.nextLine();
                     if (password.equals(rePassword)) {
                         System.out.println("Passwords match");
                         equalPass = true;
                     } else {
                         System.out.println("Passwords do not match, try again");
-                        rePassword = input.next();
+                        rePassword = input.nextLine();
                     }
                 }
                 Control.users.get(Control.userInput).setPassword(pass.encrypt(password));

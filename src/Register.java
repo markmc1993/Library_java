@@ -1,3 +1,6 @@
+// Register class
+// Created by Mark McAllister
+// Last update 10/02/2020
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -24,26 +27,26 @@ public class Register {
         //Get details from user, validate and add to correct user hashmap
         System.out.println("Casual register setup");
         System.out.println("Please enter your first name");
-        firstName = input.next(); firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
+        firstName = input.nextLine(); firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
         firstName = val.singleWordValidate(firstName);
         System.out.println("Please enter your last name");
-        lastName = input.next(); lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
+        lastName = input.nextLine(); lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
         lastName = val.singleWordValidate(lastName);
         System.out.println("Please enter your email address");
-        email = input.next();
+        email = input.nextLine();
         System.out.println("Please enter your desired password");
-        password = input.next();
+        password = input.nextLine();
         password = val.passValidate(password);
         while (!equalPass){
             System.out.println("Please confirm desired password");
-            rePassword = input.next();
+            rePassword = input.nextLine();
             if (password.equals(rePassword)){
                 System.out.println("Passwords match");
                 equalPass = true;
             }
             else{
                 System.out.println("Passwords do not match, try again");
-                rePassword = input.next();
+                rePassword = input.nextLine();
             }
         }
 
@@ -62,38 +65,37 @@ public class Register {
         //Get details from user, validate and add to correct user hashmap
         System.out.println("Member register setup");
         System.out.println("Please enter your first name");
-        firstName = input.next(); firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
+        firstName = input.nextLine(); firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
         val.singleWordValidate(firstName);
         System.out.println("Please enter your last name");
-        lastName = input.next(); lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
+        lastName = input.nextLine(); lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
         val.singleWordValidate(lastName);
         System.out.println("Please enter your email address");
-        email = input.next();
+        email = input.nextLine();
         System.out.println("Please enter your address");
-        input.nextLine();
         address = input.nextLine();
         val.multiWordValidate(address);
         System.out.println("Please enter your postcode");
         postCode = input.next().toUpperCase();
         System.out.println("Please enter your phone number");
-        phoneNo = input.next();
+        phoneNo = input.nextLine();
         val.phoneValidate(phoneNo);
         System.out.println("Please enter your date of birth (ddmmyyyy)");
-        dob = input.next();
+        dob = input.nextLine();
         val.dateValidate(dob);
         System.out.println("Please enter your desired password");
-        password = input.next();
+        password = input.nextLine();
         password = val.passValidate(password);
         while (!equalPass){
             System.out.println("Please confirm desired password");
-            rePassword = input.next();
+            rePassword = input.nextLine();
             if (password.equals(rePassword)){
                 System.out.println("Passwords match");
                 equalPass = true;
             }
             else{
                 System.out.println("Passwords do not match, try again");
-                rePassword = input.next();
+                rePassword = input.nextLine();
             }
 
         }
@@ -115,38 +117,37 @@ public class Register {
         //Get details from user, validate and add to correct user hashmap
         System.out.println("VIP register setup");
         System.out.println("Please enter your first name");
-        firstName = input.next(); firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
+        firstName = input.nextLine(); firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
         val.singleWordValidate(firstName);
         System.out.println("Please enter your last name");
-        lastName = input.next(); lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
+        lastName = input.nextLine(); lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
         val.singleWordValidate(lastName);
         System.out.println("Please enter your email address");
-        email = input.next();
+        email = input.nextLine();
         System.out.println("Please enter your address");
-        input.nextLine();
         address = input.nextLine();
         val.multiWordValidate(address);
         System.out.println("Please enter your postcode");
         postCode = input.next().toUpperCase();
         System.out.println("Please enter your phone number");
-        phoneNo = input.next();
+        phoneNo = input.nextLine();
         val.phoneValidate(phoneNo);
         System.out.println("Please enter your date of birth (ddmmyyyy)");
-        dob = input.next();
+        dob = input.nextLine();
         val.dateValidate(dob);
         System.out.println("Please enter your desired password");
-        password = input.next();
+        password = input.nextLine();
         password = val.passValidate(password);
         while (!equalPass){
             System.out.println("Please confirm desired password");
-            rePassword = input.next();
+            rePassword = input.nextLine();
             if (password.equals(rePassword)){
                 System.out.println("Passwords match");
                 equalPass = true;
             }
             else{
                 System.out.println("Passwords do not match, try again");
-                rePassword = input.next();
+                rePassword = input.nextLine();
             }
 
         }

@@ -1,3 +1,6 @@
+// Serialize class
+// Created by Mark McAllister
+// Last update 10/02/2020
 import java.io.*;
 
 public class Serialize {

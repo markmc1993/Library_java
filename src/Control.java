@@ -1,6 +1,6 @@
-// Library program with serialized data
+// Controller class
 // Created by Mark McAllister
-// Last update 09/02/2020
+// Last update 10/02/2020
 
 import java.util.*;
 
